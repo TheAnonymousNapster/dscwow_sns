@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registeration</title>
+    <link rel="stylesheet" type="text/css" href="logincss.css">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-b">
+            <div class="b-box">
+                <div id="colbtn"></div>
+                <button type="button" class="tbtn" onclick="login()">Login</button>
+                <button type="button" class="tbtn" onclick="signup()">Sign Up</button>
+            </div>
+
+            <form id="login" class="input-gl" action="rhome.html">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box">
+                <span>Remember Password</span>
+                <button type="submit" class="submitbtn">Log In</button>
+            </form>
+            <form id="signup" class="input-gs" action="rhome.html">
+                <input type="text" class="input-field" placeholder="Enter your full name" required>
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Enter email id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="date" class="input-field" required>
+                <input type="tel" class="input-field" minlength="10" maxlength="10" placeholder="Enter mobile number" required>
+
+                <input type="checkbox" class="check-box" name="terms" id="terms" onchange="activateButton(this)">
+                <span>I agree to the terms and condition</span>
+                <button type="submit" class="submitbtn" name="su" id="su">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("signup");
+        var z = document.getElementById("colbtn");
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function signup() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        /*function disableSubmit()
+          {
+            document.getElementById("su").disabled = true;
+          }
+
+          function activateButton(element)
+          {
+            if(element.checked)
+            {
+              document.getElementById("su").disabled = false;
+            }
+           else
+           {
+             document.getElementById("su").disabled = true;
+           }
+         }*/
+    </script>
+</body>
+
+</html>
